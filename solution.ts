@@ -1,4 +1,4 @@
-1.function formatValue<T>(value: T): string | number | boolean | undefined {
+function formatValue<T>(value: T): string | number | boolean | undefined {
   if (typeof value === "string") return value.toUpperCase();
   else if (typeof value === "number") return value * 10;
   else if (typeof value === "boolean") return !value;
@@ -6,7 +6,7 @@
 
 
 
-2.function getLength<T>(value: T): number | string {
+function getLength<T>(value: T): number | string {
   if (typeof value === "string" || Array.isArray(value)) {
     return value.length;
   } else {
@@ -15,7 +15,7 @@
 }
 
 
-3.class Person {
+class Person {
   constructor(public name: string, public age: number) {
     this.name = name;
     this.age = age;
@@ -27,7 +27,7 @@
 
 
 
-4.type Book = {
+type Book = {
   title: string;
   rating: number;
 };
@@ -47,7 +47,7 @@ function filterByRating(value: Book[]): Book[] {
 }
 
 
-5.type User = {
+type User = {
   id: number;
   name: string;
   email: string;
@@ -60,7 +60,7 @@ function filterActiveUsers(value: User[]): User[] {
 
 
 
-6.interface Book {
+interface Book {
   title: string;
   author: string;
   publishedYear: number;
@@ -77,7 +77,7 @@ function printBookDetails(value: Book): void {
 }
 
 
-7.type GenericArray<T> = Array<T>; 
+type GenericArray<T> = Array<T>; 
 
 function getUniqueValues(
   value1: (number | string)[],
@@ -118,7 +118,7 @@ function getUniqueValues(
 
 
 
-8.type CalculateTotalPrice = {
+type CalculateTotalPrice = {
   name: string;
   price: number;
   quantity: number;
