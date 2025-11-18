@@ -3,7 +3,7 @@
 | `interface`                                                                                                               | `type`                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | ইন্টারফেস মূলত object এর structure তৈরি করার জন্য use করা হয়। অবজেক্ট কোন property রাখবে কোন টাইপ ডিফাইন করবে তা বলে দেয়। | টাইপ একটি type Alias. আমরা টাইপ দিয়ে object ছাড়াও union,primitive, tuple সবকিছু ডিক্লেয়ার করতে পারিData |
-| Interface automatically merge হয়                                                                                          | however type not will merge automatically                                                                                           |
+| Interface automatically merge হয়                                                                                          |  তবে type  automatically merge করে না                                                                                        |
 | EXTENDS                                                                                                                   | INTERSECTION and high flexibilty                                                                        |
 
 ### interface code example
@@ -34,7 +34,7 @@ type Status = "success" | "error" | "pending"; //union
 
 ### **2.What is the use of the keyof keyword in TypeScript? Provide an example**.
 
-**keyof হচ্ছে TypeScript এর একটা operator,we can say its type operator
+**keyof হচ্ছে TypeScript এর একটা operator,আমরা বলতে পারি এটা type operator
 যেটা কোনো object type এর সব property নামগুলোকে (`basically key`)
 একটা union type আকারে দেয়।**
 
@@ -87,7 +87,7 @@ if (typeof y === "string") {
 }
 ```
 
-**We Can say it is little better than any**
+**আমরা বলতে পারি এটা any  এর চেয়ে অনেকটা ভালো**
 
 ### 3.Never:
 
