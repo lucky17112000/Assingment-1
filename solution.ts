@@ -39,7 +39,7 @@ function isValidRating(rating: number): boolean {
 
 function filterByRating(value: Book[]): Book[] {
   return value
-    .filter((item) => item.rating >= 4 && isValidRating(item.rating))
+    .filter((item) => isValidRating(item.rating) && item.rating >= 4)
     .map((item) => ({
       ...item,
       rating: Number(item.rating.toFixed(1)),
@@ -77,13 +77,16 @@ function printBookDetails(value: Book): void {
 }
 
 
-type GenericArray<T> = Array<T>; 
+
+
+type GenericArray<T> = Array<T>;
 
 function getUniqueValues(
   value1: (number | string)[],
   value2: (number | string)[]
 ): (number | string)[] {
   const ANS: GenericArray<number | string> = [];
+  let k: number = 0;
   for (let i = 0; i < value1.length; ++i) {
     let flag: boolean = false;
     for (let j = 0; j < ANS.length; ++j) {
@@ -93,7 +96,9 @@ function getUniqueValues(
       }
     }
     if (!flag) {
-      ANS.push(value1[i] as number | string);
+      // ANS.push(value1[i] as number | string);
+      ANS[k++] = value1[i] as number | string;
+      // ++k;
     }
   }
 
@@ -106,7 +111,9 @@ function getUniqueValues(
       }
     }
     if (!flag) {
-      ANS.push(value2[i] as number | string);
+      // ANS.push(value2[i] as number | string);
+      ANS[k++] = value2[i] as number | string;
+      // ++k;
     }
   }
 
